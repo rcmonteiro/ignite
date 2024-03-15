@@ -5,6 +5,42 @@ import { Sidebar } from "./components/Sidebar"
 import styles from './App.module.css'
 import './global.css'
 
+
+// author: { avatar_url: "", name: "", role: "" }
+// publishedAt: Date
+// content: String
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "https://github.com/rcmonteiro.png",
+      name: "Ricardo Monteiro",
+      role: "Web Developer"
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: 'jane.design/doctorcare' }      
+    ],
+    publishedAt: new Date('2024-03-11 08:13:38')
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "https://github.com/rcmonteiro.png",
+      name: "Larry Page",
+      role: "Google Founder"
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Um novo post aqui, fazendo testes' },
+      { type: 'link', content: 'rcmonteiro.com' }      
+    ],
+    publishedAt: new Date('2024-01-10 18:13:38')
+  }
+]
+
 export const App = () => {
   
   return (
@@ -14,14 +50,15 @@ export const App = () => {
       <div className={styles.wrapper}>
         <Sidebar/>
         <main>
-          <Post 
-          author="Rick" 
-          content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis libero modi eaque, iure labore cumque tempora facere repellat perferendis quidem illum odio magnam deleniti quibusdam fugiat incidunt velit fugit."
-          />
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
+          {posts.map(post => {
+            return (
+              <Post 
+                key={post.id}
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            )})}
         </main>
       </div>
       
