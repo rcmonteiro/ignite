@@ -1,37 +1,46 @@
 import styles from './App.module.css'
-import { Header } from './components/Header'
-import { NewTask } from './components/NewTask'
-import { TaskHeader} from './components/TaskHeader'
-import { TaskEmptyState } from './components/TaskEmptyState'
-import { Task, TaskType } from './components/Task'
+import { Header } from './components/common/Header'
+import { NewTask } from './components/task/NewTask'
+import { TaskHeader} from './components/task/TaskHeader'
+import { TaskEmptyState } from './components/task/TaskEmptyState'
+import { Task } from './components/task/Task'
 import { useEffect, useState } from 'react'
+
+
+export interface ITask {
+  id: number
+  done: boolean
+  content: string
+}
 
 export const App = () => {
 
-  const [tasks, setTasks] = useState<TaskType[]>([])
+  const [tasks, setTasks] = useState<ITask[]>([])
   const [total, setTotal] = useState(0)
   const [done, setDone] = useState(0)
 
   const createNewTask = (content: string) => {
-    const newTask: TaskType = {
+    const newTask: ITask = {
+      id: new Date().getTime(),
       done: false,
       content
     }
     setTasks([...tasks,newTask])
   }
 
-  const deleteTask = (taskToDelete: string) => {
+  const deleteTask = (taskToDelete: number) => {
     const tasksWithoutDeleted = tasks.filter((item) => {
-      if(item.content !== taskToDelete)
+      if(item.id !== taskToDelete)
         return item
     })
     setTasks(tasksWithoutDeleted)
   }
 
-  const toggleTask = (taskToChange: string) => {
+  const toggleTask = (taskToChange: number) => {
     const modifiedTasks = tasks.map(item => {
       return ({
-        done: item.content === taskToChange ? !item.done : item.done,
+        id: item.id,
+        done: item.id === taskToChange ? !item.done : item.done,
         content: item.content
       })
     })
@@ -47,9 +56,9 @@ export const App = () => {
   },[tasks])
 
   return (
-    <div className={styles.wrap}>
+    <main className={styles.wrap}>
       <Header/>
-      <main>
+      <section>
         <NewTask
           createNewTask={createNewTask}
         />
@@ -61,15 +70,14 @@ export const App = () => {
         {tasks.map(task => {
           return (
             <Task 
-              key={task.content} 
-              content={task.content}
-              done={task.done}
+              key={task.id} 
+              data={task}
               deleteTask={deleteTask}
               toggleTask={toggleTask}
             />
           )
         })}
-      </main>
-    </div>
+      </section>
+    </main>
   )
 }

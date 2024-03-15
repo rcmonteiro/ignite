@@ -4,7 +4,7 @@
   height: 100vh;
 }
 
-main {
+section {
   flex: 1;
   background-color: var(--gray-600);
   display: flex;
