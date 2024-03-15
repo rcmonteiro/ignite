@@ -1,0 +1,24 @@
+.check {
+  border: 1px solid var(--blue);
+  border-radius: 100%;
+  width: 17.45px;
+  height: 17.45px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.check:hover {
+  border-color: var(--blue-dark);
+}
+
+.done {
+  background-color: var(--purple-dark);
+  border:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.done:hover {
+  background-color: var(--purple);
+}

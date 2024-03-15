@@ -1,0 +1,15 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gray-300);
+  line-height: 1.4;
+  border-top: 1px solid var(--gray-400);
+  width: 50%;
+  border-radius: 8px;
+}
+
+.wrap > img {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
