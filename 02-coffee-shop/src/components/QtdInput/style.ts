@@ -20,5 +20,6 @@ export const QtdInputContainer = styled.div`
 
   span {
     width: 1.25rem;
+    text-align: center;
   }
 `

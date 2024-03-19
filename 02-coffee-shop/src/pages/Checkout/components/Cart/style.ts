@@ -16,15 +16,16 @@ export const CartContainer = styled.aside`
     display: flex;
     flex-direction: column;
 
-    & > button {
+    button[type='submit'] {
       color: ${(props) => props.theme.white};
       background-color: ${(props) => props.theme.yellow};
       border: none;
-      flex: 1;
+      width: 100%;
       padding: 0.75rem;
       text-transform: uppercase;
       border-radius: 6px;
       margin-top: 1.5rem;
+      cursor: pointer;
     }
   }
 `

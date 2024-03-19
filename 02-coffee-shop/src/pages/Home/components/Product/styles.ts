@@ -33,19 +33,24 @@ export const ProductContainer = styled.div`
       flex: 1;
       text-align: left;
     }
+  }
+`
 
-    & > button {
-      background-color: ${(props) => props.theme['purple-dark']};
-      color: ${(props) => props.theme.white};
-      border: none;
-      border-radius: 6px;
-      padding: 0.5rem;
-      cursor: pointer;
+interface ICartButton {
+  $isAdded: boolean
+}
 
-      &:hover {
-        background-color: ${(props) => props.theme.purple};
-      }
-    }
+export const CartButton = styled.button<ICartButton>`
+  background-color: ${({ theme, $isAdded }) =>
+    $isAdded ? theme.yellow : theme['purple-dark']};
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme, $isAdded }) =>
+      $isAdded ? theme.yellow : theme.purple};
   }
 `
 

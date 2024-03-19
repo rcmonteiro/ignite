@@ -31,6 +31,7 @@ export const CartProductContainer = styled.div`
         border: none;
         border-radius: 6px;
         padding: 0.5rem;
+        cursor: pointer;
       }
       button svg {
         color: ${(props) => props.theme.purple};

@@ -1,9 +1,12 @@
 import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import ConfirmationImage from '../../assets/confirmation-image.png'
+import { useCart } from '../../hooks/useCart'
 import { ConfirmationItem } from './ConfirmationItem'
 import { ConfirmationContainer, ConfirmationDetails } from './styles'
 
 export const Confirmation = () => {
+  const { paymentType, address } = useCart()
+
   return (
     <ConfirmationContainer className="max-container">
       <div>
@@ -17,9 +20,11 @@ export const Confirmation = () => {
             icon={<MapPin size={16} weight="fill" />}
           >
             <p>
-              Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+              Entrega em <strong>{address?.street}</strong>
             </p>
-            <p>Farrapos - Porto Alegre, RS</p>
+            <p>
+              {address?.neighborhood} - {address?.city}, {address?.region}
+            </p>
           </ConfirmationItem>
           <ConfirmationItem
             bgColor="yellow"
@@ -36,7 +41,7 @@ export const Confirmation = () => {
           >
             <p>Pagamento na entrega</p>
             <p>
-              <strong>Cartão de Crédito</strong>
+              <strong>{paymentType}</strong>
             </p>
           </ConfirmationItem>
         </ConfirmationDetails>

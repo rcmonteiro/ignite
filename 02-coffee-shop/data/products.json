@@ -1,0 +1,119 @@
+{
+  "products": [
+    {
+      "id": "PRD-001",
+      "image": "/src/assets/products/expresso.png",
+      "title": "Expresso Tradicional",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "tags": ["Tradicional"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-002",
+      "image": "/src/assets/products/americano.png",
+      "title": "Expresso Americano",
+      "description": "Expresso diluído, menos intenso que o tradicional",
+      "tags": ["Tradicional"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-003",
+      "image": "/src/assets/products/expresso-cremoso.png",
+      "title": "Expresso Cremoso",
+      "description": "Café expresso tradicional com espuma cremosa",
+      "tags": ["Tradicional"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-004",
+      "image": "/src/assets/products/cafe-gelado.png",
+      "title": "Expresso Gelado",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "tags": ["Tradicional", "Gelado"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-005",
+      "image": "/src/assets/products/cafe-com-leite.png",
+      "title": "Café com Leite",
+      "description": "Meio a meio de expresso tradicional com leite vaporizado",
+      "tags": ["Tradicional", "Com Leite"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-006",
+      "image": "/src/assets/products/latte.png",
+      "title": "Latte",
+      "description": "Meio a meio de expresso tradicional com leite vaporizado",
+      "tags": ["Tradicional", "Com Leite"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-007",
+      "image": "/src/assets/products/capuccino.png",
+      "title": "Capuccino",
+      "description":
+        "Bebida com canela feita de doses iguais de café, leite e espuma",
+      "tags": ["Tradicional", "Com Leite"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-008",
+      "image": "/src/assets/products/macchiato.png",
+      "title": "Macchiato",
+      "description":
+        "Café expresso misturado com um pouco de leite quente e espuma",
+      "tags": ["Tradicional", "Com Leite"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-009",
+      "image": "/src/assets/products/mocaccino.png",
+      "title": "Mocaccino",
+      "description": "Café expresso com calda de chocolate, pouco leite e espuma",
+      "tags": ["Tradicional", "Com Leite"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-010",
+      "image": "/src/assets/products/chocolate-quente.png",
+      "title": "Chocolate Quente",
+      "description": "Bebida feita com chocolate dissolvido no leite quente e café",
+      "tags": ["Tradicional", "Com Leite"],
+      "price": 9.9
+    },
+    {
+      "id": "PRD-011",
+      "image": "/src/assets/products/cubano.png",
+      "title": "Cubano",
+      "description":
+        "Drink gelado de café expresso com rum, creme de leite e hortelã",
+      "tags": ["Especial", "Alcoólico", "Gelado"],
+      "price": 19.9
+    },
+    {
+      "id": "PRD-012",
+      "image": "/src/assets/products/havaiano.png",
+      "title": "Havaiano",
+      "description": "Bebida adocicada preparada com café e leite de coco",
+      "tags": ["Especial"],
+      "price": 19.9
+    },
+    {
+      "id": "PRD-013",
+      "image": "/src/assets/products/arabe.png",
+      "title": "Árabe",
+      "description": "Bebida preparada com grãos de café árabe e especiarias",
+      "tags": ["Especial"],
+      "price": 19.9
+    },
+    {
+      "id": "PRD-014",
+      "image": "/src/assets/products/irlandes.png",
+      "title": "Irlandês",
+      "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
+      "tags": ["Especial", "Alcoólico"],
+      "price": 19.9
+    }
+  ]
+}

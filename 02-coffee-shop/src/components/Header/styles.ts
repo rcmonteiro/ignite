@@ -40,7 +40,15 @@ export const NavCart = styled.div`
   padding: 0.5rem;
   display: flex;
   align-items: center;
-  color: ${(props) => props.theme['yellow-dark']};
+  cursor: pointer;
+  svg {
+    color: ${(props) => props.theme['yellow-dark']};
+  }
+  &:active {
+    svg {
+      color: ${(props) => props.theme['yellow-dark']};
+    }
+  }
 `
 
 export const CartIndicator = styled.div`
