@@ -1,10 +1,10 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import logo from '../../assets/logo.svg'
 import { NewTransactionModal } from '../NewTransactionModal'
 import { HeaderContainer, HeaderContent, NewTransactionButton } from './styles'
 
-export const Header = () => {
+const HeaderComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleOpenModel = (open: boolean) => {
@@ -26,3 +26,5 @@ export const Header = () => {
     </HeaderContainer>
   )
 }
+
+export const Header = memo(HeaderComponent)
